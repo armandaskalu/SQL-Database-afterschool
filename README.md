@@ -18,7 +18,7 @@ You can find below the database diagram that was generated through Reverse Engin
 
 2.1. DDL (Data Definition Language)
 
-The following instructions were written in the scope of CREATING the structure of the database:
+The following instructions were written in the scope of creating the structure of the database:
 
 create database afterschool;
 use afterschool;
