@@ -2,4 +2,4 @@
 
 Link SQL Diagram [Git repo screenshot](https://github.com/armandaskalu/SQL-Database-afterschool/blob/main/Diagram.pdf)
 
-Link SQL Diagram [Git repo screenshot](
+Link SQL Diagram [Git repo screenshot](https://github.com/armandaskalu/SQL-Database-afterschool/blob/main/afterschool.sql)
