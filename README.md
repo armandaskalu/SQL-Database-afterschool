@@ -196,44 +196,44 @@ where idprof between 10 and 16;
 
 In order to simulate various scenarios that might happen in real life I created the following queries that would cover multiple potential real-life situations:
 
-#### afisati numele elevilor care sunt in clasa a patra
+#### display name of the students in the fourth grade
 select numeelev from elevi where clasa=4;
 
-#### afisati numele parintilor primului elev
+#### display the names of the parents of the first student
 select numeparinte from parinti where idelev=1;
 
-#### afisati numele profesorilor si materiile predate
+#### display the names of the teachers and the subjects they teach
 select numeprof,materie from profesori;
 
-#### afisati numele profesorilor care predau diferite limbi si materia predata
+#### display the names of the language teachers and the subjects they teach
 select numeprof,materie from profesori where materie like 'lb%';
 
-#### afisati toate notele la desen si muzica
+#### display all the grades for drawing and music
 select nota from note where materie='desen'or materie='muzica';
 
-#### calculati media notelor la materia matematica
+#### display the average grade in mathematics
 select avg(nota) from note where materie='matematica';
 
-#### afisati notele mai mici decat 7 impreuna cu materia si id-ul elevului
+#### display the grades that are lower than 7 togheter with the subject and the student id
 select idelev,materie,nota from note where nota<7;
 
-#### afisati cate note de 10 au fost puse in luna februarie 2024
+#### display how many grades of 10 there are in the month of February 2024
 select count(*) from note where nota=10
 and ziua between '2024-02-01' and '2024-02-29';
 
-#### afisati id-ul elevilor si materiile la care se inregistreaza absente in luna aprilie 2024
+#### display the student ids and the subjects that they have absences in the month of April 2024
 select idelev,materie from absente 
 where ziua between '2024-04-01' and '2024-04-30';
 
-#### afisati cate absente s-au inregistrat in luna iunie 2024
+#### display how many absences were registerd in the month of June 2024
 select count(*) from absente where ziua between '2024-06-01' and '2024-06-30';
 
-#### afisati profesorii care sunt si parinti
+#### display the names of the parents that are also teachers
 select parinti.numeparinte
 from parinti inner join profesori
 on parinti.numeparinte=profesori.numeprof;
 
-#### afisati datele in care s-au inregistrat si note si absente
+#### display the dates whwen there were registered both grades and absences
 select note.ziua
 from note inner join absente
 on note.ziua=absente.ziua;
